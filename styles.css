@@ -1,0 +1,81 @@
+.container {
+    display: grid;
+    grid-template-areas:
+        "big-box big-box big-box side-box"
+        "checkbox-section image-box text-box side-box"
+        "small-text-box small-text-box small-text-box side-box";
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+body{
+    background-color: #7e1111;
+}
+.big-box {
+    grid-area: big-box;
+    background-color: #610f0f;
+    color: white;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #360808;
+}
+
+.checkbox-section {
+    grid-area: checkbox-section;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.small-image {
+    width: 200px;
+    height: auto;
+}
+.image-box {
+    grid-area: image-box;
+    border:2px solid #ed3333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+.text-box {
+    grid-area: text-box;
+    background-color: #3b3b3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 24px;
+    color: white;
+    border:2px solid #292929;
+}
+
+.small-text-box {
+    grid-area: small-text-box;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    border:2px solid #fffdfd;
+}
+
+.side-box {
+    grid-area: side-box;
+    background-color: #bcb9c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    border:2px solid #7b7a7e;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Autos Deportivos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a La Mejor Agencia de Autos Deportivos</h1>
+        <p>Donde tu nuevo carro estara muy chachi pistachi</p>
+        <div class="header-right">
+            <img src="sb.jpg" alt="Logo" class="logo">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <nav id="nav-menu" class="hidden">
+        <ul>
+            <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+            <li><a href="#autos" onclick="toggleMenu()">Nuestros Autos</a></li>
+            <li><a href="#contacto" onclick="toggleMenu()">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <h2>¡Haz que tus viajes sean divertidos!</h2>
+        <p>Explora nuestra colección de autos brillantes y llenos de personalidad. ¡Tenemos el auto perfecto para ti!</p>
+        <button onclick="scrollToCars()">Ver Autos</button>
+    </section>
+
+    <section id="autos">
+        <h2>Nuestros Autos Mas Chachis Pistachis</h2>
+        <div class="car-grid">
+            <div class="car-card" onclick="showCarDetails('auto1')">
+                <img src="m3.webp" alt="Auto 1">
+                
+                <h3>chachi pistachi 👌 </h3>
+            </div>
+            <div class="car-card" onclick="showCarDetails('auto2')">
+                <img src="m2.webp" alt="Auto 2">
+                
+                <h3>chachi pistachi 👌 </h3>
+            </div>
+            <div class="car-card" onclick="showCarDetails('auto3')">
+                <img src="m4.webp" alt="Auto 3">
+                
+                <h3>chachi pistachi 👌</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>¡contactanos!</h2>
+        <p>Si tienes alguna pregunta nos encantaría ayudarte</p>
+        <form action="#">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu email" required>
+            <textarea placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Autos SB. Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('hidden');
+        }
+
+        function scrollToCars() {
+            document.getElementById("autos").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
